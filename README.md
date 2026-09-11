@@ -93,7 +93,7 @@ it's recommended to track it in version control (see `:help vim.pack-lockfile`).
 <details><summary> Linux and Mac </summary>
 
 ```sh
-git clone https://github.com/dam9000/kickstart-modular.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/FlorianTeich/kickstart-modular.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 </details>
