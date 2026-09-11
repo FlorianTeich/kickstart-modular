@@ -105,7 +105,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 local servers = {
   ty = {},
   ruff = {},
-
   -- clangd = {},
   -- gopls = {},
   -- pyright = {},

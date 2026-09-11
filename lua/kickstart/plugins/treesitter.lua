@@ -56,4 +56,11 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
+-- Start files unfolded
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
 -- vim: ts=2 sts=2 sw=2 et
