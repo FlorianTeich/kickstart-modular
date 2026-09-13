@@ -93,3 +93,31 @@ require('dap-go').setup {
     detached = vim.fn.has 'win32' == 0,
   },
 }
+
+vim.pack.add({
+  { src = 'https://github.com/scalameta/nvim-metals' },
+  { src = 'https://github.com/j-hui/fidget.nvim' },
+
+  -- Assuming you use DAP:
+  { src = 'https://github.com/mfussenegger/nvim-dap' },
+})
+
+dap.configurations.scala = {
+      {
+        type = 'scala',
+        request = 'launch',
+        name = 'RunOrTest',
+        metals = {
+          runType = 'runOrTestFile',
+          -- args = { "firstArg", "secondArg", "thirdArg" }, -- example
+        },
+      },
+      {
+        type = 'scala',
+        request = 'launch',
+        name = 'Test Target',
+        metals = {
+          runType = 'testTarget',
+        },
+      },
+    }
